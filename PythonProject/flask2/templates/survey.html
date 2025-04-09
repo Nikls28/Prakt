@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Опросник</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Опросник</h1>
+    <form method="POST">
+        <label>Ваше имя
+            <input type="text" name="name" required>
+        </label>
+
+        <fieldset>
+            <legend>1. Спите ли вы ночью?</legend>
+            <label><input type="radio" name="q1" value="Да" required> Да</label>
+            <label><input type="radio" name="q1" value="Нет"> Нет</label>
+        </fieldset><br>
+
+        <fieldset>
+            <legend>2. Выберите несколько вариантов:</legend>
+            <label><input type="checkbox" name="q2" value="Футбол">Футбол</label>
+            <label><input type="checkbox" name="q2" value="Хоккей">Хоккей</label>
+            <label><input type="checkbox" name="q2" value="Баскетбол">Баскетбол</label>
+        </fieldset><br>
+
+        <button type="submit">Отправить</button>
+    </form>
+</div>
+</body>
+</html>
